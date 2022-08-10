@@ -1,0 +1,151 @@
+body {
+  font-family: 'Montserrat';
+  background-color: #E8F9FD;
+  background-image: url('images/better_beach.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+div {
+  display: block;
+}
+
+.container {
+  width: 700px;
+  margin: 40px auto;
+}
+
+.card {
+  background-image: linear-gradient(white, #FDEFCD);
+  padding: 40px;
+  box-shadow: 0px 10px 30px rgb(0 0 0 / 10%);
+  border-radius: 10px;
+  margin: 20px 0px;
+  text-align: center;
+}
+
+h1 {
+  color: rgb(24, 151, 143);
+  font-weight: 500;
+}
+
+h2 {
+  color: rgb(84, 186, 185);
+}
+
+h3 {
+  color: rgb(24, 151, 143);
+  font-size: 25px;
+}
+
+p {
+  color: rgb(24, 151, 143);
+}
+
+.profile_pic {
+  border-radius: 10%;
+}
+
+a {
+  text-decoration: none;
+  color: #54BAB9;
+  font-size: 60px;
+}
+
+a:hover {
+  color: rgb(24, 151, 143);
+}
+
+ul {
+  list-style: none;
+  padding-left: 0px;
+}
+
+li {
+  display: inline;
+  padding: 10px;
+}
+
+.pushable {
+  position: relative;
+    border: none;
+    background: transparent;
+    padding: 0;
+    cursor: pointer;
+    outline-offset: 4px;
+    transition: filter 250ms;
+}
+
+.shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  background: hsl(0deg 0% 0% / 0.25);
+  will-change: transform;
+  transform: translateY(2px);
+  transition:
+    transform
+    600ms
+    cubic-bezier(.3, .7, .4, 1);
+}
+
+.edge {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  background: linear-gradient(
+    to left,
+    rgb(59, 172, 182) 0%,
+    rgb(47, 143, 157) 8%,
+    rgb(47, 143, 157) 92%,
+    rgb(47, 143, 157) 100%
+  );
+}
+
+.front {
+  display: block;
+  position: relative;
+  padding: 12px 42px;
+  border-radius: 12px;
+  font-size: 1.25rem;
+  color: white;
+  background: rgb(130, 219, 216);
+  will-change: transform;
+  transform: translateY(-4px);
+  transition:
+    transform
+    600ms
+    cubic-bezier(.3, .7, .4, 1);
+}
+
+.pushable:hover {
+  filter: brightness(110%);
+}
+
+.pushable:hover .front {
+  transform: translateY(-6px);
+  transition:
+  transform
+  250ms
+  cubic-bezier(.3, .7, .4, 1.5);
+}
+
+.pushable:active .front {
+  transform: translateY(-2px);
+  transition: transform 34ms;
+}
+
+.pushable:active .shadow {
+  transform: translateY(1px);
+  transition: transform 34ms;
+}
+.pushable:focus:not(:focus-visible) {
+  outline: none;
+}
